@@ -14,7 +14,7 @@ header("Location: {$imgurl}");    // 跳转至目标图像
 */
 
 $str = file_get_contents('http://bing.com/HPImageArchive.aspx?format=js&idx=0&n=1');
-if (preg_match('"url":"(.*?)"', $str, $mtc))
+if (preg_match('/"url":"(.*?)"/', $str, $mtc))
 {
     $imgurl = 'https://bing.com'.$mtc[1];
 }
@@ -24,5 +24,5 @@ else
 }
 
 header("Location: {$imgurl}");
-php?>
+?>
 
