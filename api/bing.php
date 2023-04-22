@@ -23,6 +23,6 @@ else
     $imgurl = 'http://img.infinitynewtab.com/InfinityWallpaper/2_14.jpg';
 }
 
-die(header('Location: '.$imgurl));
-?>
+header("Location: {$imgurl}");
+php?>
 
