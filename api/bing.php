@@ -13,7 +13,7 @@ if(preg_match('/<url>([^<]+)<\/url>/isU', $str, $matches)) { // 正则匹配抓�
 header("Location: {$imgurl}");    // 跳转至目标图像
 */
 
-$str = file_get_contents('http://bing.com/HPImageArchive.aspx?format=js&idx=0&n=1');
+$str = file_get_contents('http://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1');
 if (preg_match('/"url":"(.*?)"/', $str, $mtc))
 {
     $imgurl = 'https://cn.bing.com'.$mtc[1];
