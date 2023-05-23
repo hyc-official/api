@@ -5,12 +5,22 @@
         "excludeFiles": "{test/**}",
         "memory": 256,
         "maxDuration": 5
+        },
+        "api/img/sukasuka.php": {
+        "runtime": "vercel-php@0.6.0",
+        "excludeFiles": "{test/**}",
+        "memory": 256,
+        "maxDuration": 5
         }
     },
     "routes": [
         {
             "src": "/bing",
             "dest": "/api/bing"
+        },
+        {
+            "src": "/img/sukasuka",
+            "dest": "/api/img/sukasuka"
         }
     ]
 }
