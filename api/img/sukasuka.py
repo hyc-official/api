@@ -4,7 +4,7 @@ import random as rd
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
         url = '/src/img/sukasuka/{}.jpg'.format(rd.randint(1, 125))
-        self.send_response(302)
+        self.send_response(301)
         self.send_header('Content-type', 'text/html')
         self.send_header('Location', url)
         self.end_headers()
