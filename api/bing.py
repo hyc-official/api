@@ -7,7 +7,7 @@ class handler(BaseHTTPRequestHandler):
         rp = rq.get(url='http://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1')
         dt = rp.json()
         url = 'http://cn.bing.com' + dt['images'][0]['url']
-        self.send_response(301)
+        self.send_response(302)
         self.send_header('Content-type', 'text/html')
         self.send_header('Location', url)
         self.end_headers()
