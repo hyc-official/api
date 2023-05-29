@@ -6,7 +6,7 @@ class handler(BaseHTTPRequestHandler):
         url = '/src/img/sukasuka/{}.jpg'.format(rd.randint(1, 125))
         self.send_response(301)
         self.send_header('Content-type', 'text/html')
-        self.send_header('Cache-Control', 'max-age=864000')
+        self.send_header('Cache-Control', 'max-age=2592000')
         self.send_header('Location', url)
         self.end_headers()
         self.wfile.write("Sukasuka random image".encode())
