@@ -9,6 +9,7 @@ class handler(BaseHTTPRequestHandler):
         url = 'http://cn.bing.com' + dt['images'][0]['url']
         self.send_response(302)
         self.send_header('Content-type', 'text/html')
+        self.send_header('Cache-Control', 'max-age=300')
         self.send_header('Location', url)
         self.end_headers()
         self.wfile.write("Bing image".encode())
