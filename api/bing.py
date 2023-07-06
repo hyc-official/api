@@ -4,9 +4,9 @@ import json
 
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
-        rp = rq.get(url='http://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1')
+        rp = rq.get(url='https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1')
         dt = rp.json()
-        url = 'http://cn.bing.com' + dt['images'][0]['url']
+        url = 'https://cn.bing.com' + dt['images'][0]['url']
         self.send_response(302)
         self.send_header('Content-type', 'text/html')
         self.send_header('Cache-Control', 'max-age=300')
