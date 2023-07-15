@@ -6,8 +6,16 @@
     },
     "routes": [
         {
-            "src": "/(.*)",
-            "dest": "/api/$1"
+            "src": "/img/sukasuka",
+            "dest": "/api/img/sukasuka"
+        },
+        {
+            "src": "/bing",
+            "dest": "/api/bing"
+        },
+        {
+            "src": "/bing/process",
+            "dest": "/api/bing/process"
         }
     ]
 }
